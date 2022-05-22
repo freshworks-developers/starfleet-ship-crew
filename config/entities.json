@@ -1,0 +1,78 @@
+{
+  "ships": {
+    "fields": [
+      {
+        "name": "registry",
+        "label": "Registry",
+        "type": "text",
+        "required": true,
+        "filterable": true
+      },
+      {
+        "name": "name",
+        "label": "Name",
+        "type": "text",
+        "required": true,
+        "filterable": true
+      },
+      {
+        "name": "class",
+        "label": "Starship class",
+        "type": "enum",
+        "required": true,
+        "filterable": true,
+        "choices": [
+          { "id": 1, "value": "Galaxy" },
+          { "id": 2, "value": "Sovereign" },
+          { "id": 3, "value": "Cruiser" },
+          { "id": 4, "value": "Freighter" },
+          { "id": 5, "value": "Warbird" },
+          { "id": 404, "value": "Unknown" }
+        ]
+      },
+      {
+        "name": "warp",
+        "label": "Warp factor",
+        "type": "float"
+      },
+      {
+        "name": "is_active",
+        "label": "Active?",
+        "type": "boolean"
+      },
+      {
+        "name": "launch_date",
+        "label": "Since",
+        "type": "date",
+        "filterable": true
+      },
+      {
+        "name": "about",
+        "label": "About",
+        "type": "paragraph"
+      },
+      {
+        "name": "armaments",
+        "label": "Armaments",
+        "type": "section",
+        "fields": [
+          {
+            "name": "num_phaser_arrays",
+            "label": "Phaser arrays",
+            "type": "integer"
+          },
+          {
+            "name": "num_torpedo_launchers",
+            "label": "Torpedo launchers",
+            "type": "integer"
+          }
+        ]
+      },
+      {
+        "name": "last_mission_datetime",
+        "label": "Last mission",
+        "type": "datetime"
+      }
+    ]
+  }
+}
